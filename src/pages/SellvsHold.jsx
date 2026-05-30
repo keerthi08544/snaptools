@@ -173,10 +173,11 @@ export default function SellvsHold() {
           <div className="flex items-center gap-2.5 text-[26px] font-bold tracking-tight text-[#1a1a1a]">
             <Mark /> SellvsHold
           </div>
-          <a href="https://www.snaphomz.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 bg-[#161616] text-white px-6 py-3 rounded-full text-[15px] font-medium shadow-lg">
-            snaphomz.com <Arrow />
-          </a>
         </nav>
+
+        <a href="https://www.snaphomz.com" target="_blank" rel="noopener noreferrer" className="fixed top-6 right-6 z-50 flex items-center gap-2.5 bg-[#161616] text-white px-6 py-3 rounded-full text-[15px] font-medium shadow-lg">
+          snaphomz.com <Arrow />
+        </a>
 
         {/* HERO */}
         <div className="relative grid grid-cols-[minmax(0,520px)_1fr] gap-8 items-start">
