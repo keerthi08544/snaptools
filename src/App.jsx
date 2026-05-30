@@ -1,5 +1,5 @@
-import SnapJustify from "./pages/SnapJustify.jsx";
+import STRvsLTR from "./pages/STRvsLTR.jsx";
 
 export default function App() {
-  return <SnapJustify />;
+  return <STRvsLTR />;
 }
