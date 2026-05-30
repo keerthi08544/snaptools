@@ -10,64 +10,28 @@ Collection of React page replicas built from reference images. Each tool lives i
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) 18 or newer
-- npm (ships with Node)
+- [Node.js](https://nodejs.org/) 18 or newer (npm ships with it)
 
-## First-time setup
-
-The repo holds the page components only. Scaffold a Vite + React + Tailwind shell around them once:
+## Run the app
 
 ```bash
-# 1. Scaffold Vite React app in current folder
-npm create vite@latest . -- --template react
-
-# 2. Install deps
 npm install
-
-# 3. Install Tailwind
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm run dev
 ```
 
-Edit `tailwind.config.js` content array:
+Open the URL printed in the terminal (usually `http://localhost:5173`).
 
-```js
-content: ["./index.html", "./src/**/*.{js,jsx}"],
-```
+## Switch which page is shown
 
-Replace `src/index.css` with:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Add the Playfair Display font to `index.html` `<head>`:
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-```
-
-## Wire a page into the app
-
-Open `src/App.jsx` and render the page you want to view:
+Edit [src/App.jsx](src/App.jsx) and import a different page from `src/pages/`:
 
 ```jsx
-import SnapJustify from "./pages/SnapJustify";
+import SnapJustify from "./pages/SnapJustify.jsx";
 
 export default function App() {
   return <SnapJustify />;
 }
 ```
-
-## Run the dev server
-
-```bash
-npm run dev
-```
-
-Open the URL printed in the terminal (usually `http://localhost:5173`) to see the rendered page.
 
 ## Build for production
 
@@ -78,6 +42,6 @@ npm run preview
 
 ## Adding a new page
 
-1. Drop the reference image in a chat with the assistant.
-2. A new file is created at `src/pages/<ToolName>.jsx`.
+1. Send a reference image to the assistant.
+2. A new file gets created at `src/pages/<ToolName>.jsx`.
 3. Import and render it in `src/App.jsx` to view.
