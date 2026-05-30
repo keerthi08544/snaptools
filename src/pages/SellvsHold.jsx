@@ -17,14 +17,6 @@ const Mark = ({ s = 30, house = "#1a1a1a" }) => (
     <rect x="13.6" y="13.7" width="2" height="5.3" rx="0.4" fill={ORANGE} />
   </svg>
 );
-const Bar = ({ s = 19 }) => (
-  <svg width={s} height={s} viewBox="0 0 24 24" fill="none">
-    <path d="M4 3V18.5A1.5 1.5 0 0 0 5.5 20H21" stroke="#1a1a1a" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
-    <rect x="7.4" y="12" width="3" height="5.5" rx="0.6" fill="#1a1a1a" />
-    <rect x="12.1" y="8.5" width="3" height="9" rx="0.6" fill="#1a1a1a" />
-    <rect x="16.8" y="5" width="3" height="12.5" rx="0.6" fill="#1a1a1a" />
-  </svg>
-);
 const Arrow = ({ s = 14, c = ORANGE }) => (
   <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke={c} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
     <line x1="4" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" />
@@ -38,11 +30,6 @@ const Trend = ({ s = 18, c = ORANGE }) => (
 const Bank = ({ s = 18 }) => (
   <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="#3a3a3a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M3 10 12 4l9 6" /><line x1="4" y1="10" x2="4" y2="19" /><line x1="9" y1="10" x2="9" y2="19" /><line x1="15" y1="10" x2="15" y2="19" /><line x1="20" y1="10" x2="20" y2="19" /><line x1="3" y1="20" x2="21" y2="20" />
-  </svg>
-);
-const Lock = ({ s = 13 }) => (
-  <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="#8a857a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="5" y="11" width="14" height="9" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" />
   </svg>
 );
 const Home = ({ s = 22, st = "#1a1a1a", w = 1.8 }) => (
@@ -186,19 +173,15 @@ export default function SellvsHold() {
           <div className="flex items-center gap-2.5 text-[26px] font-bold tracking-tight text-[#1a1a1a]">
             <Mark /> SellvsHold
           </div>
-          <button className="flex items-center gap-2.5 bg-[#161616] text-white px-6 py-3 rounded-full text-[15px] font-medium shadow-lg">
+          <a href="https://www.snaphomz.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 bg-[#161616] text-white px-6 py-3 rounded-full text-[15px] font-medium shadow-lg">
             snaphomz.com <Arrow />
-          </button>
+          </a>
         </nav>
 
         {/* HERO */}
         <div className="relative grid grid-cols-[minmax(0,520px)_1fr] gap-8 items-start">
           {/* left text */}
-          <div className="pt-6 pb-10">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#e3dccc] bg-white/80 backdrop-blur px-4 py-2 mb-7 shadow-sm">
-              <Bar s={22} />
-              <span className="text-[12px] font-bold tracking-[0.16em]" style={{ color: ORANGE }}>INSTITUTIONAL GRADE INSIGHTS</span>
-            </div>
+          <div className="pt-12 pb-10">
             <h1 className="text-[54px] leading-[1.04] font-bold text-[#1a1a1a] mb-1 whitespace-nowrap" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Sell, Hold, Refinance,<br />or Rent It Out?
             </h1>
@@ -309,9 +292,6 @@ export default function SellvsHold() {
               <p className="text-[12px] font-bold tracking-[0.16em]" style={{ color: s.accent ? ORANGE : "#5a564e" }}>{s.label}</p>
             </div>
           ))}
-        </div>
-        <div className="flex items-center justify-center gap-2 text-[13px] text-[#8a857a]">
-          <Lock /> Your data stays private and secure — processed with bank-level encryption.
         </div>
       </div>
     </div>
