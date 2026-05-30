@@ -7,6 +7,7 @@ Collection of React page replicas built from reference images. Each tool lives i
 | Tool | File |
 | --- | --- |
 | SnapJustify | [src/pages/SnapJustify.jsx](src/pages/SnapJustify.jsx) |
+| SellvsHold | [src/pages/SellvsHold.jsx](src/pages/SellvsHold.jsx) |
 
 ## Prerequisites
 
