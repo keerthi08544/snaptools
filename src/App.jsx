@@ -1,5 +1,5 @@
-import SnapJustify from "./pages/SnapJustify.jsx";
+import SellvsHold from "./pages/SellvsHold";
 
 export default function App() {
-  return <SnapJustify />;
+  return <SellvsHold />;
 }
