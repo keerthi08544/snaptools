@@ -1,13 +1,13 @@
 import React from "react";
+import heroImg from "../assets/top_house.png";
+import roofImg from "../assets/Roof-wear.png";
+import hvacImg from "../assets/hvac_system.png";
+import foundationImg from "../assets/foundation_integrity.png";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80";
-const ROOF_IMG =
-  "https://images.unsplash.com/photo-1632933664370-3a78f1d3e9a3?w=800&q=80";
-const HVAC_IMG =
-  "https://images.unsplash.com/photo-1635274602170-f01e1cdd1e9c?w=800&q=80";
-const FOUNDATION_IMG =
-  "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80";
+const HERO_IMG = heroImg;
+const ROOF_IMG = roofImg;
+const HVAC_IMG = hvacImg;
+const FOUNDATION_IMG = foundationImg;
 
 const ArrowUpRight = ({ size = 16, className = "" }) => (
   <svg
@@ -46,19 +46,17 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const FeatureCard = ({ image, title, children }) => (
-  <div className="relative rounded-2xl overflow-hidden h-[340px] shadow-sm">
+const FeatureCard = ({ image, title }) => (
+  <div className="rounded-2xl overflow-hidden h-[340px] shadow-sm">
     <img
       src={image}
       alt={title}
-      className="absolute inset-0 w-full h-full object-cover"
+      className="w-full h-full object-cover"
+      style={{
+        filter: "contrast(1.08) saturate(1.05)",
+        imageRendering: "auto",
+      }}
     />
-    <div className="absolute top-4 left-4 right-4 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-4 py-3">
-      <h3 className="text-white text-xl font-medium">{title}</h3>
-    </div>
-    <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-4 py-3 text-white text-sm">
-      {children}
-    </div>
   </div>
 );
 
@@ -71,31 +69,38 @@ export default function SnapJustify() {
           <div className="text-3xl font-serif text-[#1a1a1a]" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             SnapJustify
           </div>
-          <div className="flex items-center gap-10 text-[15px] text-[#1a1a1a]">
-            <a href="#" className="hover:underline">How It Works</a>
-            <a href="#" className="hover:underline">Features</a>
-            <a href="#" className="hover:underline">Pricing</a>
-          </div>
-          <button className="flex items-center gap-2 bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-[15px]">
-            Contact Us <ArrowUpRight size={14} />
-          </button>
+          <a
+            href="https://snaphomz.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-[15px] hover:opacity-90"
+          >
+            Visit Snaphomz <ArrowUpRight size={14} />
+          </a>
         </nav>
 
         {/* Hero */}
         <div className="grid grid-cols-2 gap-10 items-start mb-12">
           <div className="pt-4">
             <h1
-              className="text-[76px] leading-[0.95] text-[#1a1a1a] mb-8 font-normal"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="text-[64px] leading-[1.05] text-[#1a1a1a] mb-8 whitespace-nowrap"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontWeight: 500,
+                letterSpacing: "-0.01em",
+              }}
             >
               Inspection Came<br />Back Brutal?
             </h1>
             <p className="text-[16px] text-[#3a3a3a] leading-relaxed mb-8 max-w-md">
-              A seller's guidance tool for navigating the inspection response —
-              without overstepping your agent.
+              Don't panic over a brutal inspection report. Get the facts first.
+              Upload your report to SnapJustify for an instant, plain-English
+              breakdown of what's critical, what's normal wear-and-tear, and
+              what it actually costs to fix. We give you the data and context
+              you need to walk.
             </p>
             <button className="flex items-center gap-2 bg-[#1a1a1a] text-white px-7 py-4 rounded-full text-[15px]">
-              Get Started Today <ArrowUpRight size={14} />
+              Coming Soon
             </button>
           </div>
           <div className="rounded-2xl overflow-hidden h-[360px]">
@@ -105,57 +110,14 @@ export default function SnapJustify() {
 
         {/* Feature cards */}
         <div className="grid grid-cols-3 gap-6 mb-8">
-          <FeatureCard image={ROOF_IMG} title="Roof Wear & Tear">
-            <div className="flex justify-end gap-2 mb-3">
-              <span className="px-3 py-1 rounded-full bg-blue-400/70 text-white text-xs">● Average</span>
-              <span className="px-3 py-1 rounded-full bg-orange-400/70 text-white text-xs">● Badget</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Condition:</span><span>78% (Average)</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Issues:</span><span>2 Minor</span>
-            </div>
-          </FeatureCard>
-
-          <FeatureCard image={HVAC_IMG} title="HVAC System">
-            <div className="flex justify-between py-0.5">
-              <span>Efficiency:</span><span>92%</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Last Service:</span><span>2023</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Status:</span><span>Needs Repair (Critical)</span>
-            </div>
-          </FeatureCard>
-
-          <FeatureCard image={FOUNDATION_IMG} title="Foundation Integrity">
-            <div className="flex justify-between py-0.5">
-              <span>Stability:</span><span>98%</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Cracks:</span><span>None</span>
-            </div>
-            <div className="flex justify-between py-0.5">
-              <span>Status:</span><span>Major Issue (Requires Attention)</span>
-            </div>
-          </FeatureCard>
+          <FeatureCard image={ROOF_IMG} title="Roof Wear & Tear" />
+          <FeatureCard image={HVAC_IMG} title="HVAC System" />
+          <FeatureCard image={FOUNDATION_IMG} title="Foundation Integrity" />
         </div>
 
         {/* Footer */}
         <footer className="flex items-center justify-between text-[13px] text-[#3a3a3a] pt-4">
-          <div>© 2024 SnapJustify. All rights reserved.</div>
-          <div className="flex items-center gap-8">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Contact</a>
-          </div>
-          <div className="flex items-center gap-4 text-[#1a1a1a]">
-            <a href="#"><FacebookIcon /></a>
-            <a href="#"><XIcon /></a>
-            <a href="#"><InstagramIcon /></a>
-          </div>
+          <div>© 2026 SnapJustify. All rights reserved.</div>
         </footer>
       </div>
     </div>
