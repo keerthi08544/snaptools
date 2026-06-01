@@ -1,5 +1,5 @@
-import ListingAudit from "./pages/ListingAudit";
+import SnapShop from "./pages/SnapShop";
 
 export default function App() {
-  return <ListingAudit />;
+  return <SnapShop />;
 }
