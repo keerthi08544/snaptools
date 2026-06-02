@@ -3,14 +3,23 @@ import SnapJustify from "./pages/SnapJustify.jsx";
 import STRvsLTR from "./pages/STRvsLTR.jsx";
 import SnapComps from "./pages/SnapComps.jsx";
 import SnapHype from "./pages/SnapHype.jsx";
+import SellvsHold from "./pages/SellvsHold.jsx";
+import ListingAudit from "./pages/ListingAudit.jsx";
+import SnapLens from "./pages/SnapLens.jsx";
+import SnapShop from "./pages/SnapShop.jsx";
+
+const pages = [
+  { path: "/snapjustify", name: "SnapJustify" },
+  { path: "/strvsltr", name: "STRvsLTR" },
+  { path: "/snapcomps", name: "SnapComps" },
+  { path: "/snaphype", name: "SnapHype" },
+  { path: "/sellvshold", name: "SellvsHold" },
+  { path: "/listingaudit", name: "ListingAudit" },
+  { path: "/snaplens", name: "SnapLens" },
+  { path: "/snapshop", name: "SnapShop" },
+];
 
 function Home() {
-  const pages = [
-    { path: "/snapjustify", name: "SnapJustify" },
-    { path: "/strvsltr", name: "STRvsLTR" },
-    { path: "/snapcomps", name: "SnapComps" },
-    { path: "/snaphype", name: "SnapHype" },
-  ];
   return (
     <div className="min-h-screen bg-[#fdf8f3] flex flex-col items-center justify-center font-sans p-8">
       <h1
@@ -44,6 +53,10 @@ export default function App() {
         <Route path="/strvsltr" element={<STRvsLTR />} />
         <Route path="/snapcomps" element={<SnapComps />} />
         <Route path="/snaphype" element={<SnapHype />} />
+        <Route path="/sellvshold" element={<SellvsHold />} />
+        <Route path="/listingaudit" element={<ListingAudit />} />
+        <Route path="/snaplens" element={<SnapLens />} />
+        <Route path="/snapshop" element={<SnapShop />} />
       </Routes>
     </BrowserRouter>
   );
