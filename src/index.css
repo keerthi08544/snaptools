@@ -1,11 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< Updated upstream
 
 body {
   font-family: "Inter", system-ui, sans-serif;
   margin: 0;
 }
-=======
->>>>>>> Stashed changes

@@ -1,8 +1,5 @@
 node_modules
 dist
-<<<<<<< Updated upstream
 .vite
 *.log
-=======
->>>>>>> Stashed changes
 .DS_Store
