@@ -2,12 +2,14 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import SnapJustify from "./pages/SnapJustify.jsx";
 import STRvsLTR from "./pages/STRvsLTR.jsx";
 import SnapComps from "./pages/SnapComps.jsx";
+import SnapHype from "./pages/SnapHype.jsx";
 
 function Home() {
   const pages = [
     { path: "/snapjustify", name: "SnapJustify" },
     { path: "/strvsltr", name: "STRvsLTR" },
     { path: "/snapcomps", name: "SnapComps" },
+    { path: "/snaphype", name: "SnapHype" },
   ];
   return (
     <div className="min-h-screen bg-[#fdf8f3] flex flex-col items-center justify-center font-sans p-8">
@@ -41,6 +43,7 @@ export default function App() {
         <Route path="/snapjustify" element={<SnapJustify />} />
         <Route path="/strvsltr" element={<STRvsLTR />} />
         <Route path="/snapcomps" element={<SnapComps />} />
+        <Route path="/snaphype" element={<SnapHype />} />
       </Routes>
     </BrowserRouter>
   );
