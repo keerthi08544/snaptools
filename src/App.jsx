@@ -1,5 +1,5 @@
-import SnapShop from "./pages/SnapShop";
+import SellvsHold from "./pages/SellvsHold";
 
 export default function App() {
-  return <SnapShop />;
+  return <SellvsHold />;
 }

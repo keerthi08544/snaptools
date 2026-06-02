@@ -132,11 +132,11 @@ const ProjectionChart = () => (
 );
 
 const FEATURES = [
-  { Icon: HomeChart, title: "Rent vs Buy", sub: "Compare lifestyle & financial outcomes" },
-  { Icon: Pct, title: "Snap Interest", sub: "Track rates & get smart alerts" },
-  { Icon: Search, title: "Snap Audit", sub: "Analyze deals with AI precision" },
-  { Icon: GridI, title: "SellvsHold", sub: "Run 5 strategies & find the best path" },
-  { Icon: Chip, title: "AI Engine", sub: "Institutional-grade modeling" },
+  { Icon: HomeChart, title: "Rent vs Buy", sub: "Compare lifestyle & financial outcomes", href: "https://rentvsbuy.snaphomz.com" },
+  { Icon: Pct, title: "Snap Interest", sub: "Track rates & get smart alerts", href: "https://snapinterest.snaphomz.com" },
+  { Icon: Search, title: "Snap Audit", sub: "Analyze deals with AI precision", href: "https://snapaudit.snaphomz.com" },
+  { Icon: GridI, title: "SnapPredict", sub: "Forecast your home's value path", href: "https://snappredict.snaphomz.com" },
+  { Icon: Chip, title: "SnapDisclosures", sub: "Auto-generate & review disclosures", href: "https://snapdisclosures.snaphomz.com" },
 ];
 const STATS = [
   { num: "$4.2B", label: "EQUITY MODELED", accent: true },
@@ -189,21 +189,15 @@ export default function SellvsHold() {
             <p className="text-[50px] leading-[1.1] italic font-medium mb-6" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: ORANGE }}>
               Run the Math.
             </p>
-            <p className="text-[17px] text-[#3f3b34] leading-relaxed mb-8 max-w-[440px]">
+            <p className="text-[19px] text-[#3f3b34] leading-[1.7] mb-10 max-w-[480px]">
               A homeowner equity strategy engine that goes beyond binary choices.
-              Model five strategic paths for your property across interest rates and
-              neighborhood growth with institutional precision.
+              Model five strategic paths for your property — sell, hold, refinance,
+              rent, or tap a HELOC — across interest rates and neighborhood growth,
+              with institutional-grade precision and real-time market data.
             </p>
-            <button className="inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[#1a1a1a] px-8 py-4 text-[14px] font-bold tracking-[0.16em] text-[#1a1a1a] bg-white/40 mb-12">
+            <button className="inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[#1a1a1a] px-8 py-4 text-[14px] font-bold tracking-[0.16em] text-[#1a1a1a] bg-white/40">
               <span className="w-2 h-2 rounded-full" style={{ background: ORANGE }} /> COMING SOON
             </button>
-            <div>
-              <p className="text-[12px] font-semibold tracking-[0.18em] text-[#8a857a] mb-4">TRUSTED BY REAL ESTATE PROFESSIONALS</p>
-              <div className="flex items-center gap-10 text-[#2a2a2a]">
-                <span className="flex items-center gap-2 text-[17px] font-bold"><Bank /> FINANCE+</span>
-                <span className="flex items-center gap-2 text-[17px] font-bold"><Trend /> EQUITY-IQ</span>
-              </div>
-            </div>
           </div>
 
           {/* right: glass card stack over the house */}
@@ -273,14 +267,15 @@ export default function SellvsHold() {
             </div>
           </div>
           <div className="flex-1 grid grid-cols-5">
-            {FEATURES.map(({ Icon, title, sub }, i) => (
-              <div key={title} className={`flex items-start gap-3 px-5 py-6 ${i > 0 ? "border-l border-[#e8e0d0]" : ""}`}>
+            {FEATURES.map(({ Icon, title, sub, href }, i) => (
+              <a key={title} href={href} target="_blank" rel="noopener noreferrer"
+                className={`flex items-start gap-3 px-5 py-6 transition-colors hover:bg-[#faf6ee] ${i > 0 ? "border-l border-[#e8e0d0]" : ""}`}>
                 <Icon s={28} />
                 <div className="leading-snug">
                   <p className="text-[15px] font-bold text-[#1a1a1a]">{title}</p>
                   <p className="text-[12.5px] text-[#7a766c] mt-0.5">{sub}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
